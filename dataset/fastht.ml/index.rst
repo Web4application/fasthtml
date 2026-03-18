@@ -1,12 +1,11 @@
----
-tittle: fastht.ml
-summary: FastHTML a python library which brings together Starlette, Uvicorn, HTMX, and fastcore&#39
-docs: guides
-FastTag: FastTags into a library for creating server-rendered hypermedia applications
----
+:tittle: fastht.ml
+:summary: FastHTML a python library which brings together Starlette, Uvicorn, HTMX, and fastcore&#39
+:docs: guides
+:FastTag: FastTags into a library for creating server-rendered hypermedia applications
 
 
-```python
+
+.. python:
 import * as tvmjs from "@mlc-ai/web-runtime";
 import log from "loglevel";
 import { ChatOptions, MLCEngineConfig } from "./config";
@@ -24,8 +23,8 @@ import {
   ServiceWorkerInitializationError,
 } from "./error";
 
-```
-```javascript
+
+.. javascript:
 /* Service Worker Script */
 
 type IServiceWorker = globalThis.ServiceWorker;
