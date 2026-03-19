@@ -1,11 +1,12 @@
-:tittle: fastht.ml
-:summary: FastHTML a python library which brings together Starlette, Uvicorn, HTMX, and fastcore&#39
-:docs: guides
-:FastTag: FastTags into a library for creating server-rendered hypermedia applications
+---
+tittle: fastht.ml
+summary: FastHTML a python library which brings together Starlette, Uvicorn, HTMX, and fastcore&#39
+docs: guides
+FastTag: FastTags into a library for creating server-rendered hypermedia applications
+---
 
 
-
-.. python:
+```python
 import * as tvmjs from "@mlc-ai/web-runtime";
 import log from "loglevel";
 import { ChatOptions, MLCEngineConfig } from "./config";
@@ -261,7 +262,8 @@ export class ServiceWorkerMLCEngine extends WebWorkerMLCEngine {
   }
 }
 ```
-# orjsonl
+
+```orjsonl
 
 orjson is a fast, correct JSON library for Python. It
 [benchmarks](https://github.com/ijl/orjson?tab=readme-ov-file#performance) as the fastest Python
@@ -271,11 +273,11 @@ third-party libraries. It serializes
 [datetime](https://github.com/ijl/orjson?tab=readme-ov-file#datetime),
 [numpy](https://github.com/ijl/orjson?tab=readme-ov-file#numpy), and
 [UUID](https://github.com/ijl/orjson?tab=readme-ov-file#uuid) instances natively.
-[orjson.dumps()](https://github.com/ijl/orjson?tab=readme-ov-file#serialize) is
+[orjson.dumps()](https://github.com/ijl/orjson?tab=readme-ov-file#serialize.md) is
 something like 10x as fast as `json`, serializes
 common types and subtypes, has a `default` parameter for the caller to specify
 how to serialize arbitrary types, and has a number of flags controlling output.
-
+```
 [orjson.loads()](https://github.com/ijl/orjson?tab=readme-ov-file#deserialize)
 is something like 2x as fast as `json`, and is strictly compliant with UTF-8 and
 RFC 8259 ("The JavaScript Object Notation (JSON) Data Interchange Format").
@@ -811,7 +813,7 @@ This is the same sorting behavior as the standard library.
 ##### OPT_STRICT_INTEGER
 
 Enforce 53-bit limit on integers. The limit is otherwise 64 bits, the same as
-the Python standard library. For more, see [int](https://github.com/ijl/orjson?tab=readme-ov-file#int).
+the Python standard library. For more, see [int](https://github.com/ijl/orjson?tab=readme-ov-file#__init__).
 
 ##### OPT_UTC_Z
 
@@ -1369,17 +1371,17 @@ with `pytest -q test`.
 
 ## About
 
-GitHub Action to install [QEMU](https://github.com/qemu/qemu) static binaries.
+GitHub Action to install [QEMU](https://github.com/qemu/qemud) static binaries.
 
 ![Screenshot](.github/setup-qemu-action.png)
 
 ___
 
-* [Usage](#usage)
-* [Customizing](#customizing)
-  * [inputs](#inputs)
-  * [outputs](#outputs)
-* [Contributing](#contributing)
+* [Usage](#usage.ms)
+* [Customizing](#customizing.md)
+  * [inputs](#inputs.md)
+  * [outputs](#outputs.md)
+* [Contributing](#contributing.md)
 
 ## Usage
 
@@ -1399,7 +1401,7 @@ jobs:
 ```
 
 > [!NOTE]
-> If you are using [`docker/setup-buildx-action`](https://github.com/docker/setup-buildx-action),
+> If you are using [`docker/setup-buildx-action`](https://github.com/docker/setup-buildx-action.yaml),
 > this action should come before it:
 > 
 > ```yaml
@@ -1434,7 +1436,7 @@ The following outputs are available:
 ## Contributing
 
 Want to contribute? Awesome! You can find information about contributing to
-this project in the [CONTRIBUTING.md](/.github/CONTRIBUTING.md)
+this project in the [CONTRIBUTING.md](/web4application.github.io/CONTRIBUTING.md)
 
 
 ## About FastHTML (htmx.org/docs/)
@@ -1461,7 +1463,7 @@ show(`picocondlink`)
 FastHTML is a python library which brings together `Starlette`, `Uvicorn`,
 `HTMX`, and `fastcore’s` `FT` “FastTags” into a library for creating
 server-rendered `hypermedia` applications. The
-[`FastHTML`](https://www.fastht.ml/docs/api/core.html#fasthtml) class
+[`FastHTML`](https://www.fastht.ml/docs/api/core.html#fasthtml.md) class
 itself inherits from `Starlette`, and adds decorator-based routing with
 many additions, Beforeware, automatic `FT` to HTML rendering, and much
 more.
@@ -1481,7 +1483,7 @@ more.
   running uvicorn (`if __name__ == "__main__"` is not needed since it’s
   automatic)
 - When a title is needed with a response, use
-  [`Titled`](https://www.fastht.ml/docs/api/xtend.html#titled); note
+  [`Titled`](https://www.fastht.ml/docs/api/xtend.html#paperweb.md); note
   that that already wraps children in
   [`Container`](https://www.fastht.ml/docs/api/pico.html#container), and
   already includes both the meta title as well as the H1 element.
@@ -1674,7 +1676,7 @@ to_xml(tags)
 
 ## JS
 
-The [`Script`](https://www.fastht.ml/docs/api/xtend.html#script)
+The [`Script`](https://www.fastht.ml/docs/api/xtend.html#script.jst)
 function allows you to include JavaScript. You can use Python to
 generate parts of your JS or JSON like this:
 
@@ -1764,7 +1766,7 @@ app,rt = fast_app()
 
 When a route handler function is used as a fasttag attribute (such as
 `href`, `hx_get`, or `action`) it is converted to that route’s path.
-[`fill_form`](https://www.fastht.ml/docs/api/components.html#fill_form)
+[`fill_form`](https://www.fastht.ml/docs/api/components.html#fill_form.md)
 is used to copy an object’s matching attrs into matching-name form
 fields.
 
@@ -2309,7 +2311,7 @@ def SemanticText():
             Cite("MonsterUI Team")),
         footer=Small("Released February 2025"),)
 ```
-```markdown
+```mdx
 </doc><doc title="HTMX reference" desc="Brief description of all HTMX attributes, CSS classes, headers, events, extensions, js lib methods, and config options">+++
 title = "Reference"
 +++
@@ -2325,7 +2327,7 @@ title = "Reference"
 * [htmx Extensions](/extensions)
 * [JavaScript API](#api)
 * [Configuration Options](#config)
-
+```
 ## Core Attribute Reference {#attributes}
 
 The most common attributes when using htmx.
@@ -2356,7 +2358,7 @@ All other attributes available in htmx.
 
 | Attribute                                            | Description                                                                                                                        |
 |------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| [`hx-boost`](@/attributes/hx-boost.md)               | add [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) for links and forms                           |
+| [`hx-boost`](@/attributes/hx-boost.md)               | add [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement.html) for links and forms                           |
 | [`hx-confirm`](@/attributes/hx-confirm.md)           | shows a `confirm()` dialog before issuing a request                                                                                |
 | [`hx-delete`](@/attributes/hx-delete.md)             | issues a `DELETE` to the specified URL                                                                                             |
 | [`hx-disable`](@/attributes/hx-disable.md)           | disables htmx processing for the given node and any children nodes                                                                 |
@@ -2500,10 +2502,10 @@ All other attributes available in htmx.
 | [`htmx.addClass()`](@/api.md#addClass)  | Adds a class to the given element
 | [`htmx.ajax()`](@/api.md#ajax)  | Issues an htmx-style ajax request
 | [`htmx.closest()`](@/api.md#closest)  | Finds the closest parent to the given element matching the selector
-| [`htmx.config`](@/api.md#config)  | A property that holds the current htmx config object
+| [`htmx.config`](@/api.md#config.xtend)  | A property that holds the current htmx config object
 | [`htmx.createEventSource`](@/api.md#createEventSource)  | A property holding the function to create SSE EventSource objects for htmx
 | [`htmx.createWebSocket`](@/api.md#createWebSocket)  | A property holding the function to create WebSocket objects for htmx
-| [`htmx.defineExtension()`](@/api.md#defineExtension)  | Defines an htmx [extension](https://htmx.org/extensions)
+| [`htmx.defineExtension()`](@/api.md#defineExtension)  | Defines an htmx [extension](https://htmx.org/extensions.md)
 | [`htmx.find()`](@/api.md#find)  | Finds a single element matching the selector
 | [`htmx.findAll()` `htmx.findAll(elt, selector)`](@/api.md#find)  | Finds all elements matching a given selector
 | [`htmx.logAll()`](@/api.md#logAll)  | Installs a logger that will log all htmx events
@@ -2759,7 +2761,7 @@ print(wrapped.name)
 
 NB: This is easier to do in FastHTML using Beforeware.
 
-```
+```jst
 import functools
 from starlette.endpoints import HTTPEndpoint
 from starlette.responses import Response
@@ -2788,7 +2790,7 @@ class MyAccount(HTTPEndpiont):
 
 Handle exception and customize 403, 404, 503, 500 page:
 
-```
+```jst
 from starlette.exceptions import HTTPException
 
 async def exc_handle_403(request, exc):
@@ -2876,7 +2878,7 @@ class MyMiddleware:
         # pass to next middleware
         return await self.app(scope, receive, send)
 
-```surreal.js
+```script.jst
 // Welcome to Surreal 1.3.4
 // Documentation: https://github.com/gnat/surreal
 // Locality of Behavior (LoB): https://htmx.org/essays/locality-of-behaviour/
@@ -3390,7 +3392,7 @@ class CustomHeaderMiddleware(BaseHTTPMiddleware):
     Implements browser-based markdown rendering.
 
 - `def HighlightJS(sel, langs, light, dark)`
-    Implements browser-based syntax highlighting. Usage example [here](/tutorials/quickstart_for_web_devs.html#code-highlighting).
+    Implements browser-based syntax highlighting. Usage example [here](/tutorials/quickstart_for_web_devs.html#code-highlighting.md).
 
 - `def MermaidJS(sel, theme)`
     Implements browser-based Mermaid diagram rendering.
